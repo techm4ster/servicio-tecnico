@@ -49,11 +49,19 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
+<<<<<<< HEAD
                             <th>Num. de orden de servcio</th>
                             <th>Producto</th>
                             <th>Precio de Venta</th>
                             <th>Stock</th>
                             <th>Stock Minimo</th>
+=======
+                            <th>#</th>
+                            <th>Producto</th>
+                            <th>Precio de Venta</th>
+                            <th>Stock</th>
+                            <th>Stock Mínimo</th>
+>>>>>>> 898b60f2841c3d55a8c1ee5dfd8e3231829200a4
                             <th>Acción</th>
                         </tr>
                     </thead>
@@ -94,7 +102,11 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
+<<<<<<< HEAD
                             <th>Num. de orden de servcio</th>
+=======
+                            <th>#O.S</th>
+>>>>>>> 898b60f2841c3d55a8c1ee5dfd8e3231829200a4
                             <th>Fecha Inicial</th>
                             <th>Fecha Final</th>
                             <th>Cliente</th>
@@ -349,4 +361,8 @@
  
 </script>
 
+<<<<<<< HEAD
 <?php } } ?>
+=======
+<?php } } ?>
+>>>>>>> 898b60f2841c3d55a8c1ee5dfd8e3231829200a4

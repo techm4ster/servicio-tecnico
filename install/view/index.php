@@ -37,15 +37,15 @@
           <div class="tab-container clearfix">
             <div id="pre-installation" class="tab-title col-sm-4 active">
               <i class="fa fa-circle-o"></i>
-              <strong> Pré Instalação</strong>
+              <strong> Preinstalación</strong>
             </div>
             <div id="configuration" class="tab-title col-sm-4">
               <i class="fa fa-circle-o"></i>
-              <strong> Configuração</strong>
+              <strong> Ajustes</strong>
             </div>
             <div id="finished" class="tab-title col-sm-4">
               <i class="fa fa-circle-o"></i>
-              <strong> Finalização</strong>
+              <strong> Finalización</strong>
             </div>
           </div>
         <?php endif; ?>

@@ -3,7 +3,7 @@
 $settings_file = __DIR__ . DIRECTORY_SEPARATOR . 'settings.json';
 
 if (!file_exists($settings_file)) {
-    die("Arquivo de configuração não encontrado!");
+    die("Archivo de configuración no encontrado!");
 } else {
     $contents = file_get_contents($settings_file);
     $settings = json_decode($contents, true);

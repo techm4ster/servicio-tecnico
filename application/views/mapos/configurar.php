@@ -9,10 +9,10 @@
             </div>
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#home">Generales</a></li>
-                <li><a data-toggle="tab" href="#menu1">Financiero</a></li>
+                <li><a data-toggle="tab" href="#menu1">Finanzas</a></li>
                 <li><a data-toggle="tab" href="#menu2">Productos</a></li>
                 <li><a data-toggle="tab" href="#menu3">Notificaciones</a></li>
-                <li><a data-toggle="tab" href="#menu4">Atualizaciones</a></li>
+                <li><a data-toggle="tab" href="#menu4">Actualizaciones</a></li>
                 <li><a data-toggle="tab" href="#menu5">Ordenes de Servicio</a></li>
             </ul>
             <form action="<?php echo current_url(); ?>" id="formConfigurar" method="post" class="form-horizontal">
@@ -250,7 +250,7 @@
         <div class="modal-body">
             <h5 style="text-align: left">¿Realmente desea actualizar la base de datos?</h5>
             <h7 style="text-align: left">Recomendamos hacer una copia de seguridad antes de continuar.
-                <a target="_blank" title="Fazer Bakup" class="btn btn-mini btn-inverse" href="<?php echo site_url() ?>/mapos/backup">Realizar copia de seguridad</a>
+                <a target="_blank" title="Hacer copia de seguridad" class="btn btn-mini btn-inverse" href="<?php echo site_url() ?>/mapos/backup">Realizar copia de seguridad</a>
             </h7>
         </div>
         <div class="modal-footer">

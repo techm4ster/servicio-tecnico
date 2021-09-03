@@ -1,19 +1,19 @@
 <div class="section">
-  <p>1. Por favor, verifique se as configurações do seu <strong>PHP</strong> atende aos seguintes requisitos:</p>
+  <p>1. Por favor verifique que sus configuraciones <strong>PHP</strong> Cumple los siguientes requisitos:</p>
   <hr />
   <div>
     <table>
       <thead>
         <tr>
-          <th width="25%">Configurações</th>
-          <th width="25%">Atuais</th>
+          <th width="25%">ajustes</th>
+          <th width="25%">Actual</th>
           <th>Requeridas</th>
-          <th width="15%" class="text-center">Status</th>
+          <th width="15%" class="text-center">Estado</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>PHP Version</td>
+          <td>Versión PHP</td>
           <td>
             <?php echo $current_php_version; ?>
           </td>
@@ -51,16 +51,16 @@
   </div>
 
   <div class="section">
-    <p>2. Por favor, verifique se as extensões listadas abaixo estão <strong>instaladas/habilitadas</strong> no seu servidor:</p>
+    <p>2. Por favor, verifique que las extensiones enumeradas a continuación son <strong>instaladas/habilitadas</strong> En su servidor:</p>
     <hr />
     <div>
       <table>
         <thead>
           <tr>
-            <th width="25%">Extensões</th>
-            <th width="25%">Atuais</th>
+            <th width="25%">Extensiones</th>
+            <th width="25%">Actual</th>
             <th>Requeridas</th>
-            <th width="15%" class="text-center">Status</th>
+            <th width="15%" class="text-center">Estado</th>
           </tr>
         </thead>
         <tbody>
@@ -92,15 +92,15 @@
   </div>
 
   <div class="section">
-    <p>3. Por favor, certifique-se de ter definido a permissão para <strong>leitura e escrita</strong> nos seguintes
-    diretórios e arquivos:</p>
+    <p>3. Asegúrese de haber establecido el permiso de <strong>Lectura y escritura</strong> en los siguientes
+    Directorios y Archivos:</p>
     <hr />
     <div>
       <table>
         <thead>
           <tr>
-            <th>Arquivos</th>
-            <th width="15%" class="text-center">Status</th>
+            <th>Archivos</th>
+            <th width="15%" class="text-center">Estado</th>
           </tr>
         </thead>
         <tbody>
@@ -130,5 +130,5 @@
     <button <?php if (!$all_requirement_success) {
                     echo "disabled=disabled" ;
                 } ?> class="btn btn-info
-      form-next"><i class='fa fa-chevron-right'></i> Próximo</button>
+      form-next"><i class='fa fa-chevron-right'></i> Continuar...</button>
     </div>

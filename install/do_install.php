@@ -5,7 +5,7 @@ ini_set('max_execution_time', 300); //300 seconds
 $settings_file = __DIR__ . DIRECTORY_SEPARATOR . 'settings.json';
 
 if (!file_exists($settings_file)) {
-    die("Arquivo de configuração não encontrado!");
+    die("Archivo de configuración no encontrado!");
 } else {
     $contents = file_get_contents($settings_file);
     $settings = json_decode($contents, true);
@@ -24,13 +24,13 @@ if (!empty($_POST)) {
 
     //check required fields
     if (!($host && $dbuser && $dbname && $full_name && $email && $login_password && $base_url)) {
-        echo json_encode(["success" => false, "message" => "Por favor insira todos os campos."]);
+        echo json_encode(["success" => false, "message" => "Por favor ingrese todos los campos."]);
         exit();
     }
 
     //check for valid email
     if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-        echo json_encode(["success" => false, "message" => "Por favor insira um email válido."]);
+        echo json_encode(["success" => false, "message" => "Por favor introduzca una dirección de correo electrónico válida."]);
         exit();
     }
 
@@ -44,7 +44,7 @@ if (!empty($_POST)) {
 
     //all input seems to be ok. check required fiels
     if (!is_file($settings['database_file'])) {
-        echo json_encode(["success" => false, "message" => "O arquivo ../banco.sql não foi encontrado na pasta de instalação!"]);
+        echo json_encode(["success" => false, "message" => "El archivo ../banco.sql no se encontró en la carpeta de instalación!"]);
         exit();
     }
 
@@ -57,7 +57,7 @@ if (!empty($_POST)) {
     $is_installed = strpos($db_file, "enter_hostname");
 
     if (!$is_installed) {
-        echo json_encode(["success" => false, "message" => "Parece que este aplicativo já está instalado! Você não pode reinstalá-lo novamente."]);
+        echo json_encode(["success" => false, "message" => "Parece que esta aplicación ya está instalada! No puedes volver a instalarlo de nuevo."]);
         exit();
     }
 
@@ -99,10 +99,10 @@ if (!empty($_POST)) {
     // set the environment = production
     $index_file_path = ".." . $settings['writeable_directories']['index'];
     $index_file = file_get_contents($index_file_path);
-    $index_file = preg_replace('/pre_installation/', 'production', $index_file, 1); //replace the first occurence of 'pre_installation'
+    $index_file = preg_replace('/pre_installation/', 'production', $index_file, 1); // Reemplazar la primera ocurrencia de 'pre_instalation'
 
     file_put_contents($index_file_path, $index_file);
 
-    echo json_encode(["success" => true, "message" => "Instalação bem sucedida."]);
+    echo json_encode(["success" => true, "message" => "Instalación exitosa."]);
     exit();
 }

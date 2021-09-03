@@ -18,15 +18,15 @@
         <div class="span2">
             <select name="status[]" id="status" class="span12" multiple>
                 <option value="">Selecione status</option>
-                <option value="Aberto">Abierto</option>
+                <option value="Aberto">Ingresado</option>
+                <option value="Negociação">Diagnosticado</option>
+                <option value="Orçamento">Presupuestado</option>
+                <option value="Aprovado">Aprobado</option>
+                <option value="Aguardando Peças">Esperando partes</option>
+                <option value="Em Andamento">en proceso de reparacion</option>
                 <option value="Faturado">Facturado</option>
-                <option value="Negociação">Negociación</option>
-                <option value="Em Andamento">En proceso</option>
-                <option value="Orçamento">Presupuesto</option>
                 <option value="Finalizado">Finalizado</option>
                 <option value="Cancelado">Cancelado</option>
-                <option value="Aguardando Peças">Esperando partes</option>
-                <option value="Aprovado">Aprobado</option>
             </select>
 
         </div>
@@ -53,7 +53,7 @@
             <table class="table table-bordered ">
                 <thead>
                     <tr style="background-color: #2D335B">
-                        <th>N° OS</th>
+                        <th>Num. de orden de servicio</th>
                         <th>Cliente</th>
                         <th>Responsable</th>
                         <th>Fecha de ingreso</th>

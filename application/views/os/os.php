@@ -7,33 +7,33 @@
     <form method="get" action="<?php echo base_url(); ?>index.php/os/gerenciar">
         <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'aOs')) { ?>
             <div class="span3">
-                <a href="<?php echo base_url(); ?>index.php/os/adicionar" class="btn btn-success span12"><i class="fas fa-plus"></i> Adicionar OS</a>
+                <a href="<?php echo base_url(); ?>index.php/os/adicionar" class="btn btn-success span12"><i class="fas fa-plus"></i> Agregar O.S.</a>
             </div>
         <?php
         } ?>
 
         <div class="span3">
-            <input type="text" name="pesquisa" id="pesquisa" placeholder="Nome do cliente a pesquisar" class="span12" value="">
+            <input type="text" name="pesquisa" id="pesquisa" placeholder="Nombre del cliente a buscar" class="span12" value="">
         </div>
         <div class="span2">
             <select name="status[]" id="status" class="span12" multiple>
                 <option value="">Selecione status</option>
-                <option value="Aberto">Aberto</option>
-                <option value="Faturado">Faturado</option>
-                <option value="Negociação">Negociação</option>
-                <option value="Em Andamento">Em Andamento</option>
-                <option value="Orçamento">Orçamento</option>
+                <option value="Aberto">Abierto</option>
+                <option value="Faturado">Facturado</option>
+                <option value="Negociação">Negociación</option>
+                <option value="Em Andamento">En proceso</option>
+                <option value="Orçamento">Presupuesto</option>
                 <option value="Finalizado">Finalizado</option>
                 <option value="Cancelado">Cancelado</option>
-                <option value="Aguardando Peças">Aguardando Peças</option>
-                <option value="Aprovado">Aprovado</option>
+                <option value="Aguardando Peças">Esperando partes</option>
+                <option value="Aprovado">Aprobado</option>
             </select>
 
         </div>
 
         <div class="span3">
-            <input type="text" name="data" autocomplete="off" id="data" placeholder="Data Inicial" class="span6 datepicker" value="">
-            <input type="text" name="data2" autocomplete="off" id="data2" placeholder="Data Final" class="span6 datepicker" value="">
+            <input type="text" name="data" autocomplete="off" id="data" placeholder="Fecha de ingreso" class="span6 datepicker" value="">
+            <input type="text" name="data2" autocomplete="off" id="data2" placeholder="Fecha de entrega" class="span6 datepicker" value="">
         </div>
         <div class="span1">
             <button class="span12 btn"><i class="fas fa-search"></i></button>
@@ -46,7 +46,7 @@
         <span class="icon">
             <i class="fas fa-diagnoses"></i>
         </span>
-        <h5>Ordens de Serviço</h5>
+        <h5>Órdenes de servicio</h5>
     </div>
     <div class="widget-content nopadding tab-content">
         <div class="table-responsive">
@@ -55,15 +55,15 @@
                     <tr style="background-color: #2D335B">
                         <th>N° OS</th>
                         <th>Cliente</th>
-                        <th>Responsável</th>
-                        <th>Data Inicial</th>
+                        <th>Responsable</th>
+                        <th>Fecha de ingreso</th>
                         <th>Data Final</th>
                         <th>Venc. Garantia</th>
                         <th>Valor Total</th>
                         <th>Valor Total (Faturado)</th>
                         <th>Status</th>
                         <th>T. Garantia</th>
-                        <th>Ações</th>
+                        <th>Comportamiento/Falla</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -71,7 +71,7 @@
 
                     if (!$results) {
                         echo '<tr>
-                                    <td colspan="10">Nenhuma OS Cadastrada</td>
+                                    <td colspan="10">No hay registros</td>
                                   </tr>';
                     }
                     $this->load->model('os_model');
@@ -166,15 +166,15 @@
     <form action="<?php echo base_url() ?>index.php/os/excluir" method="post">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h5 id="myModalLabel">Excluir OS</h5>
+            <h5 id="myModalLabel">Borrar OS</h5>
         </div>
         <div class="modal-body">
             <input type="hidden" id="idOs" name="id" value="" />
-            <h5 style="text-align: center">Deseja realmente excluir esta OS?</h5>
+            <h5 style="text-align: center">Realmente quieres borrar esto OS?</h5>
         </div>
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
-            <button class="btn btn-danger">Excluir</button>
+            <button class="btn btn-danger">Borrar</button>
         </div>
     </form>
 </div>
@@ -195,15 +195,15 @@
                     if (data.result == true) {
                         Swal.fire({
                             type: "success",
-                            title: "Sucesso",
-                            text: "Notificação excluída com sucesso."
+                            title: "Exito",
+                            text: "Notificación borrada con exito."
                         });
                         location.reload();
                     } else {
                         Swal.fire({
                             type: "success",
-                            title: "Sucesso",
-                            text: "Ocorreu um problema ao tentar exlcuir notificação."
+                            title: "exito",
+                            text: "Se ha producido un problema al tratar de eliminar la notificación."
                         });
                     }
                 });

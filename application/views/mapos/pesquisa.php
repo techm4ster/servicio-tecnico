@@ -2,10 +2,10 @@
     <div class="span12" style="margin-left: 0">
         <form action="<?php echo current_url() ?>">
             <div class="span10" style="margin-left: 0">
-                <input type="text" class="span12" name="termo" placeholder="Digite o termo a pesquisar"/>
+                <input type="text" class="span12" name="termo" placeholder="Ingrese el término de búsqueda"/>
             </div>
             <div class="span2">
-                <button class="span12 btn"><i class=" fas fa-search"></i> Pesquisar</button>
+                <button class="span12 btn"><i class=" fas fa-search"></i> Buscar</button>
             </div>
         </form>
     </div>
@@ -17,23 +17,23 @@
                     <span class="icon">
                         <i class="fas fa-shopping-bag"></i>
                     </span>
-                    <h5>Produtos</h5>
+                    <h5>Productos</h5>
                 </div>
                 <div class="widget-content nopadding tab-content">
                     <table class="table table-bordered ">
                         <thead>
                         <tr style="backgroud-color: #2D335B">
                             <th>#</th>
-                            <th>Nome</th>
-                            <th>Preço</th>
-                            <th>Estoque</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Inventario</th>
                             <th></th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php
                         if ($produtos == null) {
-                            echo '<tr><td colspan="4">Nenhum produto foi encontrado.</td></tr>';
+                            echo '<tr><td colspan="4">No se encontraron productos.</td></tr>';
                         }
                         foreach ($produtos as $r) {
                             echo '<tr>';
@@ -43,10 +43,10 @@
                             echo '<td>' . $r->estoque . '</td>';
                             echo '<td>';
                             if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vProduto')) {
-                                echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/produtos/visualizar/' . $r->idProdutos . '" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';
+                                echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/produtos/visualizar/' . $r->idProdutos . '" class="btn tip-top" title="Ver mas detalles"><i class="fas fa-eye"></i></a>';
                             }
                             if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eProduto')) {
-                                echo '<a href="' . base_url() . 'index.php/produtos/editar/' . $r->idProdutos . '" class="btn btn-info tip-top" title="Editar Produto"><i class="fas fa-edit"></i></a>';
+                                echo '<a href="' . base_url() . 'index.php/produtos/editar/' . $r->idProdutos . '" class="btn btn-info tip-top" title="Editar Producto"><i class="fas fa-edit"></i></a>';
                             }
                             echo '</td>';
                             echo '</tr>';
@@ -72,16 +72,16 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Nome</th>
-                            <th>CPF/CNPJ</th>
-                            <th>Cliente / Fornecedor</th>
+                            <th>Nombre</th>
+                            <th>RFC/CURP</th>
+                            <th>Cliente / Proveedor</th>
                             <th></th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php
                         if ($clientes == null) {
-                            echo '<tr><td colspan="4">Nenhum cliente foi encontrado.</td></tr>';
+                            echo '<tr><td colspan="4">No se encontraron clientes.</td></tr>';
                         }
                         foreach ($clientes as $r) {
                             echo '<tr>';
@@ -92,7 +92,7 @@
                             echo '<td><span class="badge" style="background-color: ' . $cor . '; border-color: ' . $cor . '">' . ($r->fornecedor ? 'Fornecedor' : 'Cliente') . '</span> </td>';
                             echo '<td>';
                             if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vCliente')) {
-                                echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/clientes/visualizar/' . $r->idClientes . '" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';
+                                echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/clientes/visualizar/' . $r->idClientes . '" class="btn tip-top" title="Ver mas detalles"><i class="fas fa-eye"></i></a>';
                             }
                             if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eCliente')) {
                                 echo '<a href="' . base_url() . 'index.php/clientes/editar/' . $r->idClientes . '" class="btn btn-info tip-top" title="Editar Cliente"><i class="fas fa-edit"></i></a>';
@@ -116,22 +116,22 @@
                 <span class="icon">
                     <i class="fas fa-wrench"></i>
                 </span>
-                <h5>Serviços</h5>
+                <h5>Servicios</h5>
             </div>
             <div class="widget-content nopadding tab-content">
                 <table class="table table-bordered ">
                     <thead>
                     <tr style="backgroud-color: #2D335B">
                         <th>#</th>
-                        <th>Nome</th>
-                        <th>Preço</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
                     if ($servicos == null) {
-                        echo '<tr><td colspan="4">Nenhum serviço foi encontrado.</td></tr>';
+                        echo '<tr><td colspan="4">No se encontraron servicios.</td></tr>';
                     }
                     foreach ($servicos as $r) {
                         echo '<tr>';
@@ -140,7 +140,7 @@
                         echo '<td>' . $r->preco . '</td>';
                         echo '<td>';
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eServico')) {
-                            echo '<a href="' . base_url() . 'index.php/servicos/editar/' . $r->idServicos . '" class="btn btn-info tip-top" title="Editar Serviço"><i class="fas fa-edit"></i></a>';
+                            echo '<a href="' . base_url() . 'index.php/servicos/editar/' . $r->idServicos . '" class="btn btn-info tip-top" title="Editar Servicio"><i class="fas fa-edit"></i></a>';
                         }
                         echo '</td>';
                         echo '</tr>';
@@ -160,23 +160,23 @@
                 <span class="icon">
                     <i class="fas fa-diagnoses"></i>
                 </span>
-                <h5>Ordens de Serviço</h5>
+                <h5>Ordenes de Servicio</h5>
             </div>
             <div class="widget-content nopadding tab-content">
                 <table class="table table-bordered ">
                     <thead>
                     <tr style="backgroud-color: #2D335B">
                         <th>#</th>
-                        <th>Data Inicial</th>
-                        <th>Descrição</th>
-                        <th>Defeito</th>
+                        <th>Fecha de ingreso</th>
+                        <th>Descripcion</th>
+                        <th>Falla</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
                     if ($os == null) {
-                        echo '<tr><td colspan="4">Nenhuma os foi encontrado.</td></tr>';
+                        echo '<tr><td colspan="4">No se encontro ninguna orden de servicio con esa descripcion.</td></tr>';
                     }
                     foreach ($os as $r) {
                         $dataInicial = date(('d/m/Y'), strtotime($r->dataInicial));
@@ -188,10 +188,10 @@
                         echo '<td>' . $r->defeito . '</td>';
                         echo '<td>';
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vOs')) {
-                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/os/visualizar/' . $r->idOs . '" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';
+                            echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/os/visualizar/' . $r->idOs . '" class="btn tip-top" title="Ver mas detalles"><i class="fas fa-eye"></i></a>';
                         }
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eOs')) {
-                            echo '<a href="' . base_url() . 'index.php/os/editar/' . $r->idOs . '" class="btn btn-info tip-top" title="Editar OS"><i class="fas fa-edit"></i></a>';
+                            echo '<a href="' . base_url() . 'index.php/os/editar/' . $r->idOs . '" class="btn btn-info tip-top" title="Editar O.S."><i class="fas fa-edit"></i></a>';
                         }
                         echo '</td>';
                         echo '</tr>';

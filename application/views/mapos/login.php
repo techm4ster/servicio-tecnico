@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <title><?= $this->config->item('app_name') ?> </title>
+    <title>Electronica Saturno - Sistema de ordenes de servicio </title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css" />
@@ -22,7 +22,7 @@
                 </div>
             <?php } ?>
             <div class="control-group normal_text">
-                <h3><img src="<?= base_url() ?>assets/img/logo.png" alt="Logo" /></h3>
+                <h3><img src="<?= base_url() ?>assets/img/logo1.png" alt="Logo" /></h3>
             </div>
             <div class="control-group">
                 <div class="controls">
@@ -34,7 +34,7 @@
             <div class="control-group">
                 <div class="controls">
                     <div class="main_input_box">
-                        <span class="add-on bg_lb"><i class="fas fa-lock"></i></span><input name="senha" type="password" placeholder="Senha" />
+                        <span class="add-on bg_lb"><i class="fas fa-lock"></i></span><input name="senha" type="password" placeholder="Contraseña" />
                     </div>
                 </div>
             </div>
@@ -42,23 +42,25 @@
                 <div id="progress-acessar" class='hide progress progress-info progress-striped active'>
                     <div class='bar' style='width: 100%'></div>
                 </div>
-                <button id="btn-acessar" class="btn btn-success btn-large" /> Acessar</button>
+                <button id="btn-acessar" class="btn btn-success btn-large" /> Acceder</button>
             </div>
         </form>
-
+<center>
+    Todos los derechos reservador Electronica Saturno de Colima S.A de C.V. 2021 <br> Sistema de Ordenes de Servicio Tecnico. by <a href="https://workmk.com">WorkMK</a>
+</center>
     </div>
 
     <a href="#notification" id="call-modal" role="button" class="btn" data-toggle="modal" style="display: none ">notification</a>
     <div id="notification" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 id="myModalLabel">MapOS</h4>
+            <h4 id="myModalLabel">Ordenes de Servicio Tecnico - Error</h4>
         </div>
         <div class="modal-body">
-            <h5 style="text-align: center" id="message">Os dados de acesso estão incorretos, por favor tente novamente!</h5>
+            <h5 style="text-align: center" id="message">Los datos de inicio de sesión son incorrectos, inténtelo de nuevo.</h5>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Fechar</button>
+            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>
         </div>
     </div>
     
@@ -81,7 +83,7 @@
                 messages: {
                     email: {
                         required: 'Campo Requerido.',
-                        email: 'Insira Email válido'
+                        email: 'Ingrese un email valido'
                     },
                     senha: {
                         required: 'Campo Requerido.'
@@ -106,7 +108,7 @@
                                 $('#btn-acessar').removeClass('disabled');
                                 $('#progress-acessar').addClass('hide');
                                 
-                                $('#message').text(data.message || 'Os dados de acesso estão incorretos, por favor tente novamente!');
+                                $('#message').text(data.message || 'Los datos de inicio de sesión son incorrectos, inténtelo de nuevo.');
                                 $('#call-modal').trigger('click');
                             }
                         }

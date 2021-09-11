@@ -13,19 +13,19 @@
             <thead>
                 <tr style="backgroud-color: #2D335B">
                     <th>#</th>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Telefone</th>
-                    <th>Nível</th>
-                    <th>Validade</th>
-                    <th>Ações</th>
+                    <th>Nombre</th>
+                    <th>RFC</th>
+                    <th>Telefono</th>
+                    <th>Puesto/Cargo</th>
+                    <th>Validacion</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                     if (!$results) {
                         echo '<tr>
-                                <td colspan="5">Nenhum Usuário Cadastrado</td>
+                                <td colspan="5">Ningun usuario Registrado</td>
                             </tr>';
                     }
                     foreach ($results as $r) {
